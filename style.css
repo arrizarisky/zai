@@ -31,7 +31,7 @@ main,
 
 main {
   background-color: #fff;
-  margin: 0 auto ;
+  margin: 0 auto;
 }
 
 h1 {
@@ -51,7 +51,7 @@ span {
 }
 
 form {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .image-picker {
@@ -95,6 +95,7 @@ form {
 .prompt-box {
   margin: 24px 0;
   width: 100%;
+  max-width: 600px;
   display: flex;
   gap: 8px;
   align-items: flex-end;
@@ -136,20 +137,15 @@ button:hover {
   opacity: 0.95;
 }
 
-.chat {
+.output {
   background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   border-radius: 25px 25px 25px 0;
   box-shadow: 10px 20px 15px rgba(0, 0, 0, .2);
   padding: 24px;
   color: white;
-  width: 100%;
-  white-space: normal;
-  overflow-wrap: break-word;
-  position: relative;
-
 }
 
-.chat::after {
+.output::after {
   content: "";
   position: absolute;
   top: 0;
@@ -161,15 +157,29 @@ button:hover {
   border-color: transparent transparent transparent #DCF8C6;
 }
 
-@media (max-width: 600px) {
-  .chat{
-      font-size: 14px;
-      width: 100%;
-      overflow-wrap: break-word;
-      white-space: normal;
+@media (max-width: 400px) {
+  .output {
+      overflow: auto; 
   }
-  .chat .output {
-      max-width: 100%;
+  .prompt-box {
+    flex-direction: column;
+    gap: 16px;
   }
-   /* Sesuaikan ukuran font jika perlu */
+  label {
+    width: 100%;
   }
+  button {
+    width: 100%;
+  }
+  button::after {
+    content: "Send";
+  }
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 45px;
+  }
+}
+
+
