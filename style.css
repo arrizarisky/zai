@@ -143,6 +143,10 @@ button:hover {
   color: white;
 }
 
+.chat .output {
+  max-width: 70%;
+}
+
 .chat::after {
   content: "";
   position: absolute;
