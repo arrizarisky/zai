@@ -31,6 +31,7 @@ main,
 
 main {
   background-color: #fff;
+  margin: 0 auto ;
 }
 
 h1 {
@@ -141,6 +142,7 @@ button:hover {
   box-shadow: 10px 20px 15px rgba(0, 0, 0, .2);
   padding: 24px;
   color: white;
+
 }
 
 .chat .output {
@@ -158,3 +160,16 @@ button:hover {
   border-width: 15px 0 0 15px; 
   border-color: transparent transparent transparent #DCF8C6;
 }
+
+@media (max-width: 600px) {
+  .chat{
+      font-size: 14px;
+      width: 100%;
+      overflow-wrap: break-word;
+      white-space: normal;
+  }
+  .chat .output {
+      max-width: 100%;
+  }
+   /* Sesuaikan ukuran font jika perlu */
+  }
