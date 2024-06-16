@@ -142,11 +142,11 @@ button:hover {
   box-shadow: 10px 20px 15px rgba(0, 0, 0, .2);
   padding: 24px;
   color: white;
+  width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  position: relative;
 
-}
-
-.chat .output {
-  max-width: 70%;
 }
 
 .chat::after {
